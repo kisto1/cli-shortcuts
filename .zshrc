@@ -21,13 +21,13 @@ alias mailhog='docker run -p 8025:8025 -p 1025:1025 mailhog/mailhog'
 alias whichgitremote='git config --get remote.origin.url'
 alias gitlogm2m='git log --grep="Merge branch '\''.*'\'' into '\''master'\''" --oneline'
 
-function gittag ()
+function gittag()
 {
     git tag "$1";
     git push origin "$1"
 }
 
-function gitreadtag ()
+function gitreadtag()
 {
     git tag -n --sort=creatordate | tail -n 20;
     git describe --tags
